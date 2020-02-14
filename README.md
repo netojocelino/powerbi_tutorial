@@ -109,7 +109,7 @@ Plotar gráficos é uma atividade bastante simples utilizando o Power BI, nesta 
 
 Quando os dados são carregados nos deparamos com a tela da Imagem 10, que temos uma aba para _Filtros_ para filtrar os dados já em tela, _Visualizaççoes que gera os gráficos e _Campos_ que seleciona os campos que devem ser utilizados para gerar os gráficos.
 
- ![Imagem11](/images/shots/tela_graficos.PNG)
+ ![Imagem11](./images/shots/tela_graficos.PNG)
  
  **Imagem 11** - Tela de criação de Dashboards
 
