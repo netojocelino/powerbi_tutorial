@@ -23,187 +23,160 @@ PowerBI é um serviço de análise de negócios da Microsoft. Ela permite a visu
 ## Instação
 
 O processo de instalação é super simples, bsatando seguir o seguinte caminho de grãos de café:
- Primeiramente deve-se abrir o |[link](https://www.microsoft.com/pt-BR/download/details.aspx?id=58494) da página de downloads do PowerBI em Português do Brasil (PT-BR), logo após, desce até a tela onde têm o botão _Baixar_ (Imagem 1) e clica nele.
+ Primeiramente deve-se abrir o [link](https://www.microsoft.com/pt-BR/download/details.aspx?id=58494) da página de downloads do PowerBI em Português do Brasil (PT-BR), logo após, desce até a tela onde têm o botão _Baixar_, como na Imagem 1 e clica nele.
    
- | [![Imagem 1](/images/shots/baixar.png)] |
- | :--:|
+ | [![Imagem 1](./images/shots/baixar.png)] |
+ |:--:|
  | **Imagem 1** - Escolhendo idioma para baixar |
- Após isso irá aparecer uma tela modal para selecionar a versão e clica na opção que pretende usar, dependendo da arquitetura do computador. A opção ***PBIDesktopSetup_x64.exe*** é para computadores de 64 _bits_ e a opção ***PBIDesktopSetup.exe*** para computadores de 32 _bits_.selecionar a versão clica em _Next_ e aguarda o arquivo ser baixando no computador. No exemplo instalei em um computador de 32 _bits_ (Imagem 2).
-| [![Imagem 2](/images/shots/arquitetura.png)] |
-| :--:|
+ Após isso irá aparecer uma tela modal para selecionar a versão e clica na opção que pretende usar, dependendo da arquitetura do computador. A opção ***PBIDesktopSetup_x64.exe*** é para computadores de 64 _bits_ e a opção ***PBIDesktopSetup.exe*** para computadores de 32 _bits_.selecionar a versão clica em _Next_ e aguarda o arquivo ser baixando no computador. No exemplo instalei em um computador de 32 _bits_, que pode ser acompanhada na Imagem 2.
+| [![Imagem 2](./images/shots/arquitetura.png)] |
+|:--:|
 | **Imagem 2** - Escolha de arquitetura para baixar |
 
 Após o download concluído, basta abrir o arquivo de instalação e seguir o processo de ler as telas e partir para a próxima página, caso concorde com as informações.
 
-Na primeira tela (Imagem 3) serve para escolha de idioma do **Power BI**, neste tutorial foi escolhido PT-BR. tem um link para abrir o navegador para ler os termos de politica e privacidade, caso concorde clique em *Avançar*.
- | [![Imagem 3] (/images/shots/termos.png)]|
- | :--:|
- | Imagem 3 - Iniciar instalação e termos |
+Na primeira tela da Imagem 3 serve para escolha de idioma do **Power BI**, neste tutorial foi escolhido PT-BR. 
+ | [![Imagem 3] (./images/shots/termos.png)]|
+ |:--:|
+ | Imagem 3 - Iniciar instalação e escolha de idioma |
+ 
+Na tela seguinte, tem um link para abrir o navegador para ler os termos de coleta de dados, caso concorde clique em *Avançar*. Logo em seguida, há a tela de termos de licença, como pode ser visualizada na Imagem 4, caso concorde com os termos, clique em _Aceito os termos do Contrato de Linceça_ e logo em seguida, clicar em _Avançar_.
+| [![Imagem 4] (./images/shots/termos_condicao.png)]|
+ |:--:|
+ | Imagem 4 - Termos de licença |
+ 
+Próximo passo é escolher onde deve ser instalado, podendo clicar em _Avançar_, e na tela seguinte escolher se quer instalar e inserir atalho na área de trabalho e pode _Instalar_ ou voltar e alterar uma informação anterior. Logo em seguida só esperar instalar, quando instalar podemos ver a Imagem 5.
+
+| [![Imagem 5] (./images/shots/terminar_instalar.png)]|
+ |:--:|
+ | Imagem 5 - Finalizar instalação e iniciar Power BI |
+ 
+Iniciando o Power BI.
+
+| [![Imagem 5] (./images/shots/terminar_instalar.png)]|
+ |:--:|
+ | Imagem 5 - Finalizar instalação e iniciar Power BI |
+
 
 ## Minha primeira Dashboard
-## Importantdo dados
-## Analisando os dados
+ >> Um painel é um tipo de interface gráfica do usuário que geralmente fornece
+ >> visualizações rápidas dos principais indicadores de desempenho relevantes 
+ >> para um objetivo ou processo de negócios específico. Em outro uso, "painel"
+ >> é outro nome para "relatório de progresso" ou "relatório".
+ > Fonte: Wikipédia
+
+  | O resultado deste projeto pode ser aberto em ```sample/hello_world.pbix```.
+ 
+Na nossa primeira Dashboard, iremos criar uma Dashboard que avalia informações relativos à solicitações registradas na Anatel de Sergipe. Esta informação pode ser acessada pelo link do [Portal Brasileiro de Dados Abertos](http://www.dados.gov.br/). O arquivo que iremos utilizar pode ser baixado em [Página do arquivo](http://www.dados.gov.br/dataset/solicitacoesregistradasnaanatel) ou pelo [link direto](www.anatel.gov.br/dadosabertos/PDA/Focus/Solicitacoes.zip). Na Imagem 6 é possível escolher os dados clicando em _Obter dados_.
+
+| [![Imagem 6] (./images/shots/inicio.png)]|
+ |:--:|
+ | Imagem 6 - tela inicial de apresentação  |
+
+### Importantdo dados
+
+Na tela da Imagem 7, será escolhido o formato de arquivo que será utilizado para a análise e construção de gráficos.
+Neste caso utilizaremos _Texto/CSV_ e logo em seguida _Conectar_.
+
+| [![Imagem 7] (./images/shots/obter_dados.png)]|
+ |:--:|
+ | Imagem 7 - Tela de escolha de tipo de base de dados |
+ 
+Na tela seguinte, Imagem 8, devemos escolher os dados que iremos utilizar, que neste caso utilizaremos o arquivo _Solicitações Registradas na Anatel (2007-SE).csv_ que está na pasta ```./files``` do projeto ou pode ser acessada pelo link do inicio desta seção. Quando selecionar o arquivo, clicar em _Abrir_ 
+ 
+ | [![Imagem 8] (./images/shots/abrir_dados.png)]|
+ |:--:|
+ | Imagem 8 - Tela de escolha de base de dados |
+ 
+ 
+#### Analisando os dados
+
+
+Após carregar o arquivo, deve ser feito o tratamento de dados clicando em _Tratameno de Dados_ ou podendo escolher _Carregar_. neste tutorial vamos apenas focar em gerar gráficos simples.
+ 
+ | [![Imagem 9] (./images/shots/analisar_dados.png)]|
+ |:--:|
+ | Imagem 9 - Tela de escolha de base de dados |
+
+
 ## Plotando gráficos
-## Inserindo gráficos
-## Personalizando gráficos
-## Interação entre dados
-## Filtrando dados
+
+Plotar gráficos é uma atividade bastante simples utilizando o Power BI, nesta seção iremos ver como gerar gráficos simples para analisar dados de solicitações registradas na Anatel em Sergipe.
+
+Quando os dados são carregados nos deparamos com a tela da Imagem 10, que temos uma aba para _Filtros_ para filtrar os dados já em tela, _Visualizaççoes que gera os gráficos e _Campos_ que seleciona os campos que devem ser utilizados para gerar os gráficos.
+
+ | [![Imagem 10] (/images/shots/tela_graficos.png)]|
+ |:--:|
+ | Imagem 10 - Tela de criação de Dashboards |
+
+
+### Inserindo gráficos
+
+Na Imagem 11 podemos visualizar como inserir um gráfico do tipo Rosca, que será usado nesta primeira seleção. Logo após, selecionamos os dados que devem ser gerados, neste caso utilizaremos _Ano_ e _CanalEntrada_, que gerará o Gráfico 1
+
+
+ | [![Imagem 11] (./images/shots/escolher_grafico.png)]|
+ |:--:|
+ | Imagem 11 - Tela de criação de gráfico tipo rosca |
+ 
+ | [![Imagem 12] (./images/shots/grafico1.png)]|
+ |:--:|
+ | Imagem 12 - Tela com gráfico tipo rosca |
+
+
+Também iremos utilizar uma tabela como vista na Imagem 12, que irá utilizar os campos de dados _CanalEntrada_ e _Tipo_.
+
+
+ | [![Imagem 13] (./images/shots/escolher_tabela.png)]|
+ |:--:|
+ | Imagem 13 - Tela de criação de tabela com tipos de registros |
+
+
+Obtendo o o que temos na Imagem 13.
+
+| [![Imagem 14] (./images/shots/resultado1.png)]|
+ |:--:|
+ | Imagem 14 - Tela com gráfico rosca e tabela |
+ 
+
+Por último, vamos inserir um gráfico do tipo _Faixa de opções_, na imagem 14 e escolhendo as opções _Mes_ e _Tipo_.
+
+| [![Imagem 15] (./images/shots/escolher_grafico2.png)]|
+ |:--:|
+ | Imagem 15 - Tela com gráfico tipo faixa de opções |
+
+
+### Personalizando gráficos
+
+Após os passos anteriores obtemos o que temos na Imagem 15, e vamos mudar a cor de cada barra no gráfico _Mes por Tipo_. Primeiro, clicamos no gráfico, e clicamos na aba com o desenho de um rolo de pintura com propriedades de _Formato_ e seleciona _Mostrar tudo_, como pode ser visto em Imagem 16.
+
+| [![Imagem 16] (./images/shots/resultado2.png)]|
+ |:--:|
+ | Imagem 16 - Tela com todos os gráficos |
+ 
+ | [![Imagem 17] (./images/shots/formatos.png)]|
+ |:--:|
+ | Imagem 17 - Alterar cores do gráfico |
+
+
+Após isso, basta mudar a cor de cada campo para a cor que desejar.
+
+### Interação entre dados ou Filtra dados
+Para interagir os dados basta clicar na informação e todos os campos irão se adaptar à esse dado. Como pode ser visto na Imagem 
+ 
+ | [![Imagem 18] (./images/shots/filtros.png)]|
+ |:--:|
+ | Imagem 18 - Filtros entre campos relacionados |
+
+
 ## Mágica
 
-
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
-
-This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
-
-### Tech
-
-Dillinger uses a number of open source projects to work properly:
-
-* [AngularJS] - HTML enhanced for web apps!
-* [Ace Editor] - awesome web-based text editor
-* [markdown-it] - Markdown parser done right. Fast and easy to extend.
-* [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [node.js] - evented I/O for the backend
-* [Express] - fast node.js network app framework [@tjholowaychuk]
-* [Gulp] - the streaming build system
-* [Breakdance](https://breakdance.github.io/breakdance/) - HTML to Markdown converter
-* [jQuery] - duh
-
-And of course Dillinger itself is open source with a [public repository][dill]
- on GitHub.
-
-### Installation
-
-Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
-
-Install the dependencies and devDependencies and start the server.
-
-```sh
-$ cd dillinger
-$ npm install -d
-$ node app
-```
-
-For production environments...
-
-```sh
-$ npm install --production
-$ NODE_ENV=production node app
-```
-
-### Plugins
-
-Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
-
-| Plugin | README |
-| ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
-| GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
+Ao final deste tutorial, tu já estará apto à criar Dashboards para analisar informações diversas.
+Assim, podemos salvar o arquivo para análise futura em ```Arquivo > Salvar Como```, escolher o diretório e escolher o nome.
 
 
-### Development
 
-Want to contribute? Great!
-
-Dillinger uses Gulp + Webpack for fast developing.
-Make a change in your file and instantaneously see your updates!
-
-Open your favorite Terminal and run these commands.
-
-First Tab:
-```sh
-$ node app
-```
-
-Second Tab:
-```sh
-$ gulp watch
-```
-
-(optional) Third:
-```sh
-$ karma test
-```
-#### Building for source
-For production release:
-```sh
-$ gulp build --prod
-```
-Generating pre-built zip archives for distribution:
-```sh
-$ gulp build dist --prod
-```
-### Docker
-Dillinger is very easy to install and deploy in a Docker container.
-
-By default, the Docker will expose port 8080, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image.
-
-```sh
-cd dillinger
-docker build -t joemccann/dillinger:${package.json.version} .
-```
-This will create the dillinger image and pull in the necessary dependencies. Be sure to swap out `${package.json.version}` with the actual version of Dillinger.
-
-Once done, run the Docker image and map the port to whatever you wish on your host. In this example, we simply map port 8000 of the host to port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
-
-```sh
-docker run -d -p 8000:8080 --restart="always" <youruser>/dillinger:${package.json.version}
-```
-
-Verify the deployment by navigating to your server address in your preferred browser.
-
-```sh
-127.0.0.1:8000
-```
-
-#### Kubernetes + Google Cloud
-
-See [KUBERNETES.md](https://github.com/joemccann/dillinger/blob/master/KUBERNETES.md)
+Espero que tenha aproveitado esta jornada.
 
 
-### Todos
-
- - Write MORE Tests
- - Add Night Mode
-
-License
-----
-
-MIT
-
-
-**Free Software, Hell Yeah!**
-
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
-
-   [dill]: <https://github.com/joemccann/dillinger>
-   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
-   [john gruber]: <http://daringfireball.net>
-   [df1]: <http://daringfireball.net/projects/markdown/>
-   [markdown-it]: <https://github.com/markdown-it/markdown-it>
-   [Ace Editor]: <http://ace.ajax.org>
-   [node.js]: <http://nodejs.org>
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [jQuery]: <http://jquery.com>
-   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
-   [express]: <http://expressjs.com>
-   [AngularJS]: <http://angularjs.org>
-   [Gulp]: <http://gulpjs.com>
-
-   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
-   [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
-   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
-   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
-   [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
-   [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
+**Sistema de Apoio à Decisão, Hell Yeah!**
